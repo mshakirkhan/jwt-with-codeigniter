@@ -5,7 +5,7 @@ require APPPATH . '/libraries/JWT.php';
 class ImplementJwt
 {
     //////////The function generate token/////////////
-    PRIVATE $key = "subcribe_my_channel"; // url: https://www.youtube.com/watch?v=zD4IGp1lBWs
+    PRIVATE $key = "123456789"; // url: https://www.youtube.com/watch?v=zD4IGp1lBWs
     public function GenerateToken($data)
     {         
         $jwt = JWT::encode($data, $this->key);

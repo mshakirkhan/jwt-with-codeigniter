@@ -18,12 +18,11 @@ class Api extends CI_Controller
 
     public function LoginToken()
     {
-        // $tokenData['uniqueId'] = '55555';
-        // $tokenData['role'] = 'admin';
-        // $tokenData['timeStamp'] = Date('Y-m-d h:i:s');
-
-        $data['status'] = true;
-        $data['msg_data'] = "This is testing message";
+        $data = array(
+                    'email' => "shakir.sedoc@gmail.com",
+                    'github' => "mshakirkhan",
+                    'status' => true
+                );
         $jwtToken = $this->objOfJwt->GenerateToken($data);
         echo json_encode(array('Token'=>$jwtToken));
     }
