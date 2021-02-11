@@ -1,11 +1,10 @@
 <?php
 require APPPATH . '/libraries/JWT.php';
 
-
 class ImplementJwt
 {
     //////////The function generate token/////////////
-    PRIVATE $key = "123456789"; // url: https://www.youtube.com/watch?v=zD4IGp1lBWs
+    PRIVATE $key = "123456789";
     public function GenerateToken($data)
     {         
         $jwt = JWT::encode($data, $this->key);
